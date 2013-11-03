@@ -1,0 +1,10 @@
+maxsecsold=300
+savegamedirectory=/path/to/your/save/directory
+sender=email@example.com
+receiversfile=/path/to/line/separated/email/addresses
+host=smtp-host-name.example.com
+port=25
+user=smtp-user-name
+pass=smtp-password
+message=Your Message Contents, Avoid equality signs
+subject=Message subject, again remember you are in a property file
