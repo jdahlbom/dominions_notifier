@@ -85,7 +85,15 @@ def main():
 	else:
 		print ("No new turn :(")
 		
-
+	if (props["repeat"]):
+		while (True):
+			time.sleep(float(props["maxsecsold"]))
+			if turn_changed_within(props["savegamedirectory"], float(props["maxsecsold"])):
+				print ("Turn changed, send email!")
+				send_notifications(props)
+				send_turnfiles(props)
+			else:
+				print ("No new turn :(. Sleeping for "+props["maxsecsold"]+" seconds ...");
 	
 	
 main()
